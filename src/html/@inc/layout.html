@@ -1,0 +1,29 @@
+{% macro include(fileName) -%}
+	{% include fileName ignore missing -%}
+{% endmacro -%}
+<!DOCTYPE html>
+<html lang="ko">
+{{ include('./head.html') }}
+<body>
+	<ul class="skip-nav">
+		<li>
+			<a href="#mainContent">본문 바로가기</a>
+		</li>
+	</ul>
+
+	<div class="wrapper">
+		<!-- Header // -->
+		{{ include('./header.html') }}
+		<!-- // Header -->
+
+		<!-- Content // -->
+		{% block content %}
+		{% endblock %}
+		<!-- // Content -->
+
+		<!-- Footer // -->
+		{{ include('./footer.html') }}
+		<!-- // Footer -->
+	</div>
+</body>
+</html>

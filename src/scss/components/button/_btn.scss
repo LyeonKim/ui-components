@@ -1,0 +1,10 @@
+@use './helpers/index' as *;
+@use './vendors/sprites' as *;
+
+.btn {
+	font-size: 14px;
+}
+
+.desc {
+	@include spriteIR(30px, 30px, $common-arrow);
+}
