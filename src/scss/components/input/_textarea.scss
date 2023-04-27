@@ -1,0 +1,28 @@
+@use './helpers/index' as *;
+@use './vendors/sprites' as *;
+
+.textarea {
+	box-sizing: border-box;
+	width: 210px;
+	padding: 16px;
+	background-color: #fff;
+	border: 1px solid var(--line-color1);
+	outline: none;
+	color: var(--default-color);
+	resize: none;
+
+	&::placeholder { color: var(--grey-color3); }
+
+	&:focus {
+		border-color: hsl(210 86% 51%);
+		outline: none;
+		box-shadow: 0 0 0 1px hsl(210 86% 51%) inset;
+	}
+
+	&:read-only {
+		background-color: var(--disabled-color);
+		box-shadow: none;
+
+		&:focus { border-color: var(--line-color1); }
+	}
+}

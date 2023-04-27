@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="format-detection" content="telephone=no">
+	
+	<title>Components Guide</title>
+	
+	<!-- Application Style / Script -->
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="../../js/lib/jquery-3.6.2.min.js"></script>
+	<script src="../../js/ui-common.js"></script>
+	
+	<!-- Components Guide -->
+	<link rel="stylesheet" href="../../js/components-guide/index.css">
+	<link rel="stylesheet" href="../../js/components-guide/highlight/vs2015.min.css">
+	<script src="../../js/components-guide/highlight/highlight.min.js"></script>
+	<script src="../../js/components-guide/index.js"></script>
+</head>
+<body>
+	
+	<h1 class="component-page-head">Components</h1>
+	
+	<div class="component-nav">
+		<p class="t">Components</p>
+		<ul class="list"></ul>
+	</div>
+	
+	<h2 class="component-head">Button</h2>
+	
+	<h3 class="component-sub-head">기본 버튼</h3>
+	<div class="component-body">
+		<div class="component-row">
+			<!-- <div class="component-item" data-title="Button - Regular" data-theme="dark"> -->
+			<div class="component-item" data-title="Button - Regular">
+				<div class="component-contents">
+					<a href="#" class="btn">버튼</a>
+					<a href="#" class="btn primary">버튼</a>
+					<a href="#" class="btn secondary">버튼</a>
+					
+					<a href="#" class="btn line">버튼</a>
+					<a href="#" class="btn line primary">버튼</a>
+					<a href="#" class="btn line secondary">버튼</a>
+					<a href="#" class="btn disabled">버튼</a>
+					
+					<br><br>
+					<a href="#" class="btn round">버튼</a>
+					<a href="#" class="btn round primary">버튼</a>
+					<a href="#" class="btn round secondary">버튼</a>
+					
+					<a href="#" class="btn round line">버튼</a>
+					<a href="#" class="btn round line primary">버튼</a>
+					<a href="#" class="btn round line secondary">버튼</a>
+					<a href="#" class="btn round disabled">버튼</a>
+				</div>
+			</div>
+			<div class="component-item" data-title="Button - Large">
+				<div class="component-contents">
+					<a href="#" class="btn large">버튼</a>
+					<a href="#" class="btn large primary">버튼</a>
+					<a href="#" class="btn large secondary">버튼</a>
+					
+					<a href="#" class="btn large line">버튼</a>
+					<a href="#" class="btn large line primary">버튼</a>
+					<a href="#" class="btn large line secondary">버튼</a>
+					<a href="#" class="btn large disabled">버튼</a>
+					
+					<br><br>
+					<a href="#" class="btn large round">버튼</a>
+					<a href="#" class="btn large round primary">버튼</a>
+					<a href="#" class="btn large round secondary">버튼</a>
+					
+					<a href="#" class="btn large round line">버튼</a>
+					<a href="#" class="btn large round line primary">버튼</a>
+					<a href="#" class="btn large round line secondary">버튼</a>
+					<a href="#" class="btn large round disabled">버튼</a>
+				</div>
+			</div>
+		</div>
+		<div class="component-row">
+			<div class="component-item" data-title="Button - Small">
+				<div class="component-contents">
+					<a href="#" class="btn small">버튼</a>
+					<a href="#" class="btn small primary">버튼</a>
+					<a href="#" class="btn small secondary">버튼</a>
+					<a href="#" class="btn small line">버튼</a>
+					<a href="#" class="btn small line primary">버튼</a>
+					<a href="#" class="btn small line secondary">버튼</a>
+					<a href="#" class="btn small disabled">버튼</a>
+					<br><br>
+					<a href="#" class="btn small round">버튼</a>
+					<a href="#" class="btn small round primary">버튼</a>
+					<a href="#" class="btn small round secondary">버튼</a>
+					<a href="#" class="btn small round line">버튼</a>
+					<a href="#" class="btn small round line primary">버튼</a>
+					<a href="#" class="btn small round line secondary">버튼</a>
+					<a href="#" class="btn small round disabled">버튼</a>
+				</div>
+			</div>
+			<div class="component-item" data-title="Button - align Regular">
+				<div class="component-contents">
+					<div class="btn-group">
+						<a href="#" class="btn primary">버튼</a>
+						<a href="#" class="btn secondary">버튼</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="component-row">
+			<div class="component-item" data-title="Button - align Right">
+				<div class="component-contents">
+					<div class="btn-group right">
+						<a href="#" class="btn primary">버튼</a>
+						<a href="#" class="btn secondary">버튼</a>
+					</div>
+				</div>
+			</div>
+			<div class="component-item" data-title="Button - align Center">
+				<div class="component-contents">
+					<div class="btn-group center">
+						<a href="#" class="btn primary">버튼</a>
+						<a href="#" class="btn secondary">버튼</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="component-row">
+			<div class="component-item" data-title="Button - full row">
+				<div class="component-contents">
+					<div class="btn-group row">
+						<a href="#" class="btn primary">버튼</a>
+						<a href="#" class="btn line primary">버튼</a>
+					</div>
+					<br>
+					<div class="btn-group row">
+						<a href="#" class="btn primary">버튼</a>
+						<a href="#" class="btn secondary">버튼</a>
+						<a href="#" class="btn primary">버튼</a>
+					</div>
+					<br>
+					<div class="btn-group row">
+						<a href="#" class="btn line primary">버튼</a>
+						<a href="#" class="btn line primary">버튼</a>
+						<a href="#" class="btn line primary">버튼</a>
+						<a href="#" class="btn primary">버튼</a>
+					</div>
+				</div>
+			</div>
+			<div class="component-item" data-title="Button - full col">
+				<div class="component-contents">
+					<div class="btn-group col">
+						<a href="#" class="btn primary">버튼</a>
+						<a href="#" class="btn secondary">버튼</a>
+						<a href="#" class="btn line primary">버튼</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--  -->
+	<h2 class="component-head">Input</h2>
+	
+	<h3 class="component-sub-head">Input text</h3>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item">
+				<div class="component-contents">
+					<input type="text" name="" id="" class="text" value="text" placeholder="placeholder">
+					&nbsp;&nbsp;
+					<input type="text" name="" id="" class="text" value="" placeholder="placeholder">
+					/ readonly:
+					<input type="text" name="" id="" class="text" value="readonly" placeholder="placeholder" readonly>
+					/ disabled:
+					<input type="text" name="" id="" class="text" value="" placeholder="placeholder" disabled>
+					<br><br>
+					<input type="text" name="" id="" class="text underline" value="text" placeholder="placeholder">
+					&nbsp;&nbsp;
+					<input type="text" name="" id="" class="text underline" value="" placeholder="placeholder">
+					/ readonly:
+					<input type="text" name="" id="" class="text underline" value="readonly" placeholder="placeholder" readonly>
+					/ disabled:
+					<input type="text" name="" id="" class="text underline" value="" placeholder="placeholder" disabled>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<h3 class="component-sub-head">Text area</h3>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item">
+				<div class="component-contents">
+					<textarea name="" id="" class="textarea" placeholder="" cols="30" rows="10" >textarea</textarea>
+					&nbsp;&nbsp;
+					<textarea name="" id="" class="textarea" placeholder="textarea" cols="30" rows="10" ></textarea>
+					&nbsp;/ readonly:
+					<textarea name="" id="" class="textarea" placeholder="" cols="30" rows="10"  readonly>readonly</textarea>
+					&nbsp;/ disabled:
+					<textarea name="" id="" class="textarea" placeholder="disabled" cols="30" rows="10" disabled></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<h3 class="component-sub-head">Attach file</h3>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item">
+				<div class="component-contents">
+					<div class="add-file-wrap">
+						<div class="add">
+							<label for="add-file01" class="btn">파일 첨부
+								<input type="file" class="file" name="" id="add-file01">
+							</label>
+						</div>
+						<ul class="file-wrap">
+							<li class="content">
+								<div class="name">첨부 파일명.pptx</div>
+								<div class="del">delete</div>
+							</li>
+							<li class="content">
+								<div class="name">첨부 파일명_최종.pptx</div>
+								<div class="del">delete</div>
+							</li>
+							<li class="content">
+								<div class="name">첨부 파일명_최종_최최종.pptx</div>
+								<div class="del">delete</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<h3 class="component-sub-head">Radio</h3>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item">
+				<div class="component-contents">
+					[ 텍스트(X) ] <br><br>
+					<label class="radio" for="">
+						<input type="radio" name="" id="">
+						<div class="img"></div>
+					</label>
+					<br>
+					<label class="radio" for="">
+						<input type="radio" name="" id="">
+						<div class="img"></div>
+						<div class="txt"></div>
+					</label>
+				</div>
+			</div>
+			<div class="component-item">
+				<div class="component-contents">
+					[ 텍스트(O) ] <br><br>
+					<label class="radio" for="">
+						<input type="radio" name="" id="">
+						<div class="img"></div>
+					</label>
+					<br>
+					<label class="radio" for="">
+						<input type="radio" name="" id="">
+						<div class="img"></div>
+						<div class="txt"></div>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- <h3 class="component-sub-head">Checkbox</h3>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item">
+				<div class="component-contents">
+					<input type="checkbox" class="checkbox" name="" id="">
+				</div>
+			</div>
+		</div>
+	</div> -->
+	
+	<!-- <h3 class="component-sub-head">Switch</h3>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item">
+				<div class="component-contents">
+					<label for="" class="switch">
+						<input type="checkbox" name="" id="">
+						<div class="img"></div>
+					</label>
+					<label for="" class="switch">
+						<input type="checkbox" name="" id="">
+						<div class="txt">텍스트</div>
+						<div class="img"></div>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	
+	<!-- <h3 class="component-sub-head">Select</h3>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item">
+				<div class="component-contents">
+					<select class="select" name="" id="">
+						<option value="">선택</option>
+						<option value="옵션1">옵션1</option>
+						<option value="옵션2">옵션2</option>
+						<option value="옵션3">옵션3</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	
+	<h3 class="component-sub-head">Drop down</h3>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item">
+				<div class="component-contents">
+					<div class="drop-down">
+						<div class="top">
+							<div class="txt">최근등록순</div>
+						</div>
+						<ul class="list">
+							<li>낮은 가격 순</li>
+							<li>높은 가격 순</li>
+							<li>판매량 순</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- <h2 class="component-head">Button</h2> -->
+	<!-- <h3 class="component-sub-head">컴포넌트 종류</h3>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item">
+				<div class="component-contents">
+
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="resize-padding" style="height:200px;"></div>
+	<div class="wrapper" style="display: none;"></div>
+</body>
+</html>

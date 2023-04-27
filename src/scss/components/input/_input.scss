@@ -1,0 +1,55 @@
+@use './helpers/index' as *;
+@use './vendors/sprites' as *;
+
+input.text {
+	box-sizing: border-box;
+	min-width: 210px;
+	padding: 11px 16px;
+	border: 1px solid var(--line-color1);
+	outline: none;
+	font-family: 'SUIT', sans-serif;
+	font-size: 14px;
+	color: var(--default-color);
+
+
+	@include height(40px);
+
+	&::placeholder { color: var(--grey-color3); }
+
+	&:focus {
+		border-color: hsl(210 86% 51%);
+		outline: none;
+		box-shadow: 0 0 0 1px hsl(210 86% 51%) inset;
+		// box-shadow: none;
+	}
+
+	&:read-only {
+		box-shadow: none;
+
+		&:focus { border-color: var(--line-color1); }
+	}
+
+	&:disabled {
+		background-color: var(--disabled-color);
+		cursor: default;
+	}
+
+
+
+
+	&.underline {
+		border-top: 0;
+		border-right: 0;
+		border-left: 0;
+
+		&:focus { box-shadow: 0 -1px 0 0 hsl(210 86% 51%) inset; }
+
+		&:read-only {
+			box-shadow: none;
+
+			&:focus { border-color: var(--line-color1); }
+		}
+
+		&:disabled { background: transparent; }
+	}
+}

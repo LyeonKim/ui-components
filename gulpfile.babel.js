@@ -19,7 +19,7 @@ import sassGlob from 'gulp-sass-glob-use-forward';
 import replace from 'gulp-replace';
 import autoprefixer from 'gulp-autoprefixer';
 import postcss from 'gulp-postcss';
-import pxtorem from 'gulp-pxtorem';
+// import pxtorem from 'gulp-pxtorem';
 import reporter from 'postcss-reporter';
 import syntax_scss from 'postcss-scss';
 // import mqpacker from 'gulp-css-mqpacker';
@@ -250,7 +250,7 @@ const buildStyle = filepath => {
   .on('error', sass.logError))
   .pipe(replace('@@img', replacePath))
   .pipe(autoprefixer(autoprefixerOpt))
-  .pipe(pxtorem(pxtoremOpt))
+  // .pipe(pxtorem(pxtoremOpt))
   // .pipe(gulpIf(isDevEnv, mqpacker()))
   // .pipe(through2.obj(convertOneLineCSS))
   .pipe(dest(`${baseDir}/css`, { sourcemaps: './' }))

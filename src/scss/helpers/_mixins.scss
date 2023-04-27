@@ -1,5 +1,11 @@
 @use './vendors/sprites' as *;
 
+//Height
+@mixin height($height) {
+	height: $height;
+	line-height: $height;
+}
+
 // Hide
 @mixin hide {
 	width: 1px;
