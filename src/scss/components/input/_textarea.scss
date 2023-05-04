@@ -3,7 +3,6 @@
 
 .textarea {
 	box-sizing: border-box;
-	width: 210px;
 	padding: 16px;
 	background-color: #fff;
 	border: 1px solid var(--line-color1);
@@ -11,7 +10,7 @@
 	color: var(--default-color);
 	resize: none;
 
-	&::placeholder { color: var(--grey-color3); }
+	&::placeholder { color: var(--gray-color3); }
 
 	&:focus {
 		border-color: hsl(210 86% 51%);

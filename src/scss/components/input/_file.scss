@@ -1,35 +1,39 @@
 @use './helpers/index' as *;
 @use './vendors/sprites' as *;
 
-input.file {
-	width: 0;
-	height: 0;
-	font-size: 0;
-}
+
 
 .add-file-wrap {
 	display: flex;
 	gap: 20px;
 
-	.btn { width: 85px; }
+	.btn { width: 85px;
+
+		input.file {
+			width: 0;
+			height: 0;
+			font-size: 0;
+		}
+	}
 
 	.file-wrap {
 		display: flex;
 		flex-flow: column;
 
 		.content {
-			@include height(40px);
 			box-sizing: border-box;
 			display: flex;
 			align-items: center;
 			gap: 5px;
+			height: 40px;
 			font-size: 13px;
+			line-height: 40px;
 		}
 
 		.del {
 			width: 20px;
 			height: 20px;
-			background: url('@@img/common/delBtn.png') no-repeat 50% 50%/ contain;
+			background: url('@@img/common/del-btn.png') no-repeat 50% 50%/ contain;
 			font-size: 0;
 		}
 	}

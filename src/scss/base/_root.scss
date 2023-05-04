@@ -1,5 +1,18 @@
 @use './helpers' as *;
 
 :root {
-
+	// bg color
+	--default-color: hsl(240 2% 12%);
+	--primary-color: hsl(223 60% 38%);
+	--secondary-color: hsl(180 86% 43%);
+	--disabled-color: hsl(225 15% 95%);
+	--gray-color1: hsl(240 2% 48%); //#78787D
+	--gray-color2: hsl(210 1% 56%); //#8e8f90
+	--gray-color3: hsl(220 9% 73%); //#B4B8C0
+	// line color
+	--line-color1: hsl(223 13% 90%);
+	// font weight
+	--bold: 600;
+	--semi-bold: 500;
+	--light: 300;
 }

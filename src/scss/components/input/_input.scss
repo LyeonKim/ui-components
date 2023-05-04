@@ -4,17 +4,16 @@
 input.text {
 	box-sizing: border-box;
 	min-width: 210px;
-	padding: 11px 16px;
+	height: 40px;
+	padding: 0 16px;
 	border: 1px solid var(--line-color1);
 	outline: none;
 	font-family: 'SUIT', sans-serif;
 	font-size: 14px;
+	line-height: 40px;
 	color: var(--default-color);
 
-
-	@include height(40px);
-
-	&::placeholder { color: var(--grey-color3); }
+	&::placeholder { color: var(--gray-color3); }
 
 	&:focus {
 		border-color: hsl(210 86% 51%);
@@ -24,6 +23,7 @@ input.text {
 	}
 
 	&:read-only {
+		background-color: var(--disabled-color);
 		box-shadow: none;
 
 		&:focus { border-color: var(--line-color1); }
@@ -31,7 +31,7 @@ input.text {
 
 	&:disabled {
 		background-color: var(--disabled-color);
-		cursor: default;
+		color: var(--);
 	}
 
 
@@ -45,6 +45,7 @@ input.text {
 		&:focus { box-shadow: 0 -1px 0 0 hsl(210 86% 51%) inset; }
 
 		&:read-only {
+			background: transparent;
 			box-shadow: none;
 
 			&:focus { border-color: var(--line-color1); }

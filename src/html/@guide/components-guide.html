@@ -32,8 +32,7 @@
 	<h3 class="component-sub-head">기본 버튼</h3>
 	<div class="component-body">
 		<div class="component-row">
-			<!-- <div class="component-item" data-title="Button - Regular" data-theme="dark"> -->
-			<div class="component-item" data-title="Button - Regular">
+			<div class="component-item" data-title="Regular">
 				<div class="component-contents">
 					<a href="#" class="btn">버튼</a>
 					<a href="#" class="btn primary">버튼</a>
@@ -55,7 +54,7 @@
 					<a href="#" class="btn round disabled">버튼</a>
 				</div>
 			</div>
-			<div class="component-item" data-title="Button - Large">
+			<div class="component-item" data-title="Large">
 				<div class="component-contents">
 					<a href="#" class="btn large">버튼</a>
 					<a href="#" class="btn large primary">버튼</a>
@@ -79,7 +78,7 @@
 			</div>
 		</div>
 		<div class="component-row">
-			<div class="component-item" data-title="Button - Small">
+			<div class="component-item" data-title="Small">
 				<div class="component-contents">
 					<a href="#" class="btn small">버튼</a>
 					<a href="#" class="btn small primary">버튼</a>
@@ -98,7 +97,13 @@
 					<a href="#" class="btn small round disabled">버튼</a>
 				</div>
 			</div>
-			<div class="component-item" data-title="Button - align Regular">
+		</div>
+	</div>
+
+	<h3 class="component-sub-head">버튼 그룹</h3>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item" data-title="Default- left">
 				<div class="component-contents">
 					<div class="btn-group">
 						<a href="#" class="btn primary">버튼</a>
@@ -106,9 +111,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="component-row">
-			<div class="component-item" data-title="Button - align Right">
+			<div class="component-item" data-title="Right">
 				<div class="component-contents">
 					<div class="btn-group right">
 						<a href="#" class="btn primary">버튼</a>
@@ -116,7 +119,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="component-item" data-title="Button - align Center">
+		</div>
+		<div class="component-row">
+			<div class="component-item" data-title="Center">
 				<div class="component-contents">
 					<div class="btn-group center">
 						<a href="#" class="btn primary">버튼</a>
@@ -126,7 +131,7 @@
 			</div>
 		</div>
 		<div class="component-row">
-			<div class="component-item" data-title="Button - full row">
+			<div class="component-item" data-title="row">
 				<div class="component-contents">
 					<div class="btn-group row">
 						<a href="#" class="btn primary">버튼</a>
@@ -147,7 +152,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="component-item" data-title="Button - full col">
+			<div class="component-item" data-title="col">
 				<div class="component-contents">
 					<div class="btn-group col">
 						<a href="#" class="btn primary">버튼</a>
@@ -162,7 +167,7 @@
 <!--  -->
 	<h2 class="component-head">Input</h2>
 
-	<h3 class="component-sub-head">Input text</h3>
+	<h3 class="component-sub-head">Text</h3>
 	<div class="component-body">
 		<div class="component-row">
 			<div class="component-item">
@@ -187,14 +192,12 @@
 		</div>
 	</div>
 
-	<h3 class="component-sub-head">Text area</h3>
+	<h3 class="component-sub-head">Textarea</h3>
 	<div class="component-body">
 		<div class="component-row">
 			<div class="component-item">
 				<div class="component-contents">
 					<textarea name="" id="" class="textarea" placeholder="" cols="30" rows="10" >textarea</textarea>
-					&nbsp;&nbsp;
-					<textarea name="" id="" class="textarea" placeholder="textarea" cols="30" rows="10" ></textarea>
 					&nbsp;/ readonly:
 					<textarea name="" id="" class="textarea" placeholder="" cols="30" rows="10"  readonly>readonly</textarea>
 					&nbsp;/ disabled:
@@ -218,15 +221,15 @@
 						<ul class="file-wrap">
 							<li class="content">
 								<div class="name">첨부 파일명.pptx</div>
-								<div class="del">delete</div>
+								<button class="del">delete</button>
 							</li>
 							<li class="content">
 								<div class="name">첨부 파일명_최종.pptx</div>
-								<div class="del">delete</div>
+								<button class="del">delete</button>
 							</li>
 							<li class="content">
 								<div class="name">첨부 파일명_최종_최최종.pptx</div>
-								<div class="del">delete</div>
+								<button class="del">delete</button>
 							</li>
 						</ul>
 					</div>
@@ -240,33 +243,38 @@
 		<div class="component-row">
 			<div class="component-item">
 				<div class="component-contents">
-					[ 텍스트(X) ] <br><br>
-					<label class="radio" for="">
-						<input type="radio" name="" id="">
-						<div class="img"></div>
+					<label class="radio">
+						<input type="radio" name="" checked>
+						<span>텍스트</span>
+					</label>
+
+					<label class="radio">
+						<input type="radio" name="">
+						<span>텍스트</span>
 					</label>
 					<br>
-					<label class="radio" for="">
-						<input type="radio" name="" id="">
-						<div class="img"></div>
-						<div class="txt"></div>
+					<label class="radio">
+						<input type="radio" name="" disabled checked>
+						<span>텍스트</span>
+					</label>
+					<label class="radio">
+						<input type="radio" name="" disabled>
+						<span>텍스트</span>
+					</label>
+					<br>
+					<label class="radio">
+						<input type="radio" class="error" name="" checked>
+						<span>텍스트</span>
+					</label>
+
+					<label class="radio">
+						<input type="radio" class="error" name="">
+						<span>텍스트</span>
 					</label>
 				</div>
 			</div>
 			<div class="component-item">
-				<div class="component-contents">
-					[ 텍스트(O) ] <br><br>
-					<label class="radio" for="">
-						<input type="radio" name="" id="">
-						<div class="img"></div>
-					</label>
-					<br>
-					<label class="radio" for="">
-						<input type="radio" name="" id="">
-						<div class="img"></div>
-						<div class="txt"></div>
-					</label>
-				</div>
+				<div class="component-contents"></div>
 			</div>
 		</div>
 	</div>
@@ -317,7 +325,7 @@
 		</div>
 	</div> -->
 
-	<h3 class="component-sub-head">Drop down</h3>
+	<!-- <h3 class="component-sub-head">Drop down</h3>
 	<div class="component-body">
 		<div class="component-row">
 			<div class="component-item">
@@ -335,7 +343,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 	<!-- <h2 class="component-head">Button</h2> -->

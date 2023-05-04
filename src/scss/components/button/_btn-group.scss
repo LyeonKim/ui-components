@@ -1,0 +1,26 @@
+@use './helpers/index' as *;
+@use './vendors/sprites' as *;
+
+.btn-group {
+	display: flex;
+
+	&.right { justify-content: flex-end; }
+
+	&.center { justify-content: center; }
+
+	&.row {
+		flex-flow: nowrap;
+
+		.btn {
+			flex-grow: 1;
+
+			&:not(:first-child) { border-left: 0; }
+		}
+	}
+
+	&.col {
+		flex-flow: column wrap;
+
+		.btn { width: 100%; }
+	}
+}

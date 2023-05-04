@@ -1,0 +1,52 @@
+@use './helpers/index' as *;
+@use './vendors/sprites' as *;
+
+label.radio {
+	display: inline-flex;
+
+	& > input[type='radio'] {
+		@include hide();
+
+		&:checked + span::before {
+			@include sprite($common-radio-checked);
+		}
+
+		&:disabled {
+			& + span::before {
+				@include sprite($common-radio-disabled);
+			}
+
+			&:checked + span::before {
+				@include sprite($common-radio-disabled-checked);
+			}
+		}
+
+		&.error {
+			& + span::before {
+				@include sprite($common-radio-error);
+			}
+
+			&:checked + span::before {
+				@include sprite($common-radio-error-checked);
+			}
+		}
+	}
+
+	& > span {
+		box-sizing: border-box;
+		display: inline-flex;
+		align-items: center;
+		padding: 5px 5px 5px 30px;
+		position: relative;
+		font-size: 16px;
+
+
+		&::before {
+			@include sprite($common-radio);
+			content: '';
+			position: absolute;
+			top: 5px;
+			left: 0;
+		}
+	}
+}
