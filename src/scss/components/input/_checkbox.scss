@@ -1,0 +1,65 @@
+@use './helpers/index' as *;
+@use './vendors/sprites' as *;
+
+label.check {
+	display: inline-flex;
+	vertical-align: middle;
+
+	&.only {
+		input[type='checkbox'] + span {
+			width: 20px;
+			height: 30px;
+			padding: 5px;
+		}
+	}
+
+	input[type='checkbox'] {
+		@include hide();
+
+		&:checked + span::before { @include sprite($common-check-checked); }
+
+
+		&:disabled {
+			& + span { color: var(--disabled-text-color); }
+
+			& + span::before { @include sprite($common-check-disabled); }
+
+			&:checked + span::before { @include sprite($common-check-disabled-checked); }
+		}
+
+		&.error {
+			& + span { color: var(--error-color); }
+
+			& + span::before { @include sprite($common-check-error); }
+
+			&:checked + span::before { @include sprite($common-check-error-checked); }
+		}
+
+		&.indeterminate {
+			& + span::before { @include sprite($common-check-indeterminate); }
+
+			&:disabled + span::before { @include sprite($common-check-disabled-indeterminate); }
+
+			&.error + span::before { @include sprite($common-check-error-indeterminate); }
+		}
+
+
+		& + span {
+			box-sizing: border-box;
+			display: inline-flex;
+			align-items: center;
+			min-height: 30px;
+			padding: 5px 5px 5px 30px;
+			position: relative;
+			font-size: 16px;
+
+			&::before {
+				@include sprite($common-check);
+				content: '';
+				position: absolute;
+				top: 5px;
+				left: 0;
+			}
+		}
+	}
+}

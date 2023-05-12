@@ -21,3 +21,4 @@ dialog { border: 0; margin: 0; padding: 0; max-width: none; max-height: none; co
 *, ::after, ::before { box-sizing: border-box; }
 :focus:not(:focus-visible) { outline: 0; }
 // :focus-visible { outline: 0; box-shadow: 0 0 2px 2px hsl(50deg 100% 58%); }
+:focus-visible { outline: 0; box-shadow: 0 0 2px 2px var(--focus-line-color); }

@@ -6,7 +6,7 @@ input.text {
 	min-width: 210px;
 	height: 40px;
 	padding: 0 16px;
-	border: 1px solid var(--line-color1);
+	border: 1px solid var(--line-color);
 	outline: none;
 	font-family: 'SUIT', sans-serif;
 	font-size: 14px;
@@ -16,22 +16,21 @@ input.text {
 	&::placeholder { color: var(--gray-color3); }
 
 	&:focus {
-		border-color: hsl(210 86% 51%);
+		border-color: var(--focus-line-color);
 		outline: none;
-		box-shadow: 0 0 0 1px hsl(210 86% 51%) inset;
-		// box-shadow: none;
+		box-shadow: 0 0 0 1px var(--focus-line-color) inset;
 	}
 
 	&:read-only {
 		background-color: var(--disabled-color);
 		box-shadow: none;
 
-		&:focus { border-color: var(--line-color1); }
+		&:focus { border-color: var(--line-color); }
 	}
 
 	&:disabled {
 		background-color: var(--disabled-color);
-		color: var(--);
+		color: var(--disabled-text-color);
 	}
 
 
@@ -42,13 +41,13 @@ input.text {
 		border-right: 0;
 		border-left: 0;
 
-		&:focus { box-shadow: 0 -1px 0 0 hsl(210 86% 51%) inset; }
+		&:focus { box-shadow: 0 -1px 0 0 var(--focus-line-color) inset; }
 
 		&:read-only {
 			background: transparent;
 			box-shadow: none;
 
-			&:focus { border-color: var(--line-color1); }
+			&:focus { border-color: var(--line-color); }
 		}
 
 		&:disabled { background: transparent; }

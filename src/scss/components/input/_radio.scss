@@ -12,22 +12,14 @@ label.radio {
 		}
 
 		&:disabled {
+			& + span { color: var(--disabled-text-color); }
+
 			& + span::before {
 				@include sprite($common-radio-disabled);
 			}
 
 			&:checked + span::before {
 				@include sprite($common-radio-disabled-checked);
-			}
-		}
-
-		&.error {
-			& + span::before {
-				@include sprite($common-radio-error);
-			}
-
-			&:checked + span::before {
-				@include sprite($common-radio-error-checked);
 			}
 		}
 	}
@@ -48,5 +40,41 @@ label.radio {
 			top: 5px;
 			left: 0;
 		}
+	}
+}
+
+.radio.only {
+	display: inline-flex;
+	width: 20px;
+	height: 20px;
+	position: relative;
+
+	input[type='radio'] {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		z-index: 2;
+		opacity: 0;
+
+		&:checked + span {
+			@include sprite($common-radio-checked);
+		}
+
+		&:disabled {
+			& + span {
+				@include sprite($common-radio-disabled);
+			}
+
+			&:checked + span {
+				@include sprite($common-radio-disabled-checked);
+			}
+		}
+	}
+
+	& > span {
+		@include sprite($common-radio);
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 }

@@ -5,23 +5,23 @@
 	box-sizing: border-box;
 	padding: 16px;
 	background-color: #fff;
-	border: 1px solid var(--line-color1);
+	border: 1px solid var(--line-color);
 	outline: none;
 	color: var(--default-color);
 	resize: none;
 
-	&::placeholder { color: var(--gray-color3); }
+	&::placeholder { color: var(--disabled-text-color); }
 
 	&:focus {
-		border-color: hsl(210 86% 51%);
+		border-color: var(--focus-line-color);
 		outline: none;
-		box-shadow: 0 0 0 1px hsl(210 86% 51%) inset;
+		box-shadow: 0 0 0 1px var(--focus-line-color) inset;
 	}
 
 	&:read-only {
 		background-color: var(--disabled-color);
 		box-shadow: none;
 
-		&:focus { border-color: var(--line-color1); }
+		&:focus { border-color: var(--line-color); }
 	}
 }

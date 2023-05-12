@@ -1,0 +1,8 @@
+@use './helpers/index' as *;
+@use './vendors/sprites' as *;
+
+label.switch {
+	input[type='checkbox'] {
+		@include hide();
+	}
+}

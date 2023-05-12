@@ -34,7 +34,9 @@ body { box-sizing: border-box; width: 1400px; margin: 0 auto; padding-left: 170p
 .btn-expand:hover span { font-size: 12px; opacity: 1; margin-right: 0; }
 .btn-expand.on:before { content: '▲'; }
 .btn-expand.on span { font-size: 12px; opacity: 1; margin-right: 0; }
-.component-nav { box-sizing: border-box; width: 150px; height: 100%; padding: 42px 10px 30px; font-family: 'Helvetica Neue','Helvetica',sans-serif; background: #fff; border: 1px solid #ebebeb; box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5); position: fixed; top: 0; left: 0; z-index: 99999; overflow: auto; overflow-x: hidden; }
+/* .component-nav { box-sizing: border-box; width: 150px; height: 100%; padding: 42px 10px 30px; font-family: 'Helvetica Neue','Helvetica',sans-serif; background: #fff; border: 1px solid #ebebeb; box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5); position: fixed; top: 0; left: 0; z-index: 99999; overflow: auto; overflow-x: hidden; } */
+.component-nav { box-sizing: border-box; width: 50px; height: 100%; padding: 42px 10px 30px; font-family: 'Helvetica Neue','Helvetica',sans-serif; background: #fff; border: 1px solid #ebebeb; box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5); position: fixed; top: 0; left: 0; z-index: 99999; overflow: auto; overflow-x: hidden; }
+
 .component-nav .t { margin-bottom: 15px; font-weight: 700; font-size: 16px; color: #333; }
 .component-nav a { display: block; padding: 10px 0 10px 10px; font-size: 14px; color: #444; position: relative; }
 .component-nav li.on a { color: #409eff; }

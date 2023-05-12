@@ -1,0 +1,36 @@
+@use './helpers/index' as *;
+@use './vendors/sprites' as *;
+
+.select {
+	box-sizing: border-box;
+	display: inline-flex;
+	width: 335px;
+	min-width: 335px;
+	height: 40px;
+	padding: 11px 42px 11px 16px;
+	background: #fff url('@@img/common/arrow.png') no-repeat;
+	background-position: calc(100% - 16px) 50%;
+	border: 1px solid var(--line-color);
+	font-size: 14px;
+	// -webkit-appearance: none; /* 크롬 화살표 없애기 */
+	-moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+	appearance: none;
+
+	&:focus {
+		background-image: url('@@img/common/arrow-enabled.png');
+		border-color: var(--focus-line-color);
+		box-shadow: 0 0 0 1px var(--focus-line-color) inset;
+	}
+
+	&:disabled {
+		background-color: var(--disabled-color);
+		background-image: url('@@img/common/arrow-disabled.png');
+		color: var(--disabled-text-color);
+	}
+
+	&.error {
+		background-image: url('@@img/common/arrow-error.png');
+		border-color: var(--error-color);
+		box-shadow: 0 0 0 1px var(--error-color) inset;
+	}
+}

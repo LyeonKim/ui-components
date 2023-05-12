@@ -3,24 +3,67 @@
 
 .btn-group {
 	display: flex;
+	gap: 10px;
 
 	&.right { justify-content: flex-end; }
 
 	&.center { justify-content: center; }
 
+	&.between {
+		justify-content: space-between;
+
+		.wrap {
+			display: flex;
+			gap: 10px;
+		}
+	}
+
 	&.row {
 		flex-flow: nowrap;
+		gap: 0;
 
 		.btn {
 			flex-grow: 1;
 
-			&:not(:first-child) { border-left: 0; }
+			&.grow2 { flex-grow: 2; }
+
+			&.grow3 { flex-grow: 3; }
+
+			&.line + .btn.line { border-left: 0; }
 		}
 	}
 
 	&.col {
 		flex-flow: column wrap;
+		gap: 0;
 
-		.btn { width: 100%; }
+		&.round { gap: 5px; }
+
+		.btn {
+			width: 100%;
+
+			&.line + .btn.line { border-top: 0; }
+		}
+	}
+
+	&.col-mix {
+		flex-flow: column wrap;
+		gap: 0;
+
+		& > .btn-group.row {
+			display: flex;
+
+			&:not(:last-child) {
+				.btn { border-bottom: 0; }
+			}
+		}
+
+		& > .btn {
+			width: 100%;
+
+			& + .btn-group.row {
+				.btn { border-top: 0; }
+			}
+		}
 	}
 }
