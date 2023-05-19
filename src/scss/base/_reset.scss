@@ -20,5 +20,4 @@ legend { width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; po
 dialog { border: 0; margin: 0; padding: 0; max-width: none; max-height: none; color: inherit; visibility: visible; }
 *, ::after, ::before { box-sizing: border-box; }
 :focus:not(:focus-visible) { outline: 0; }
-// :focus-visible { outline: 0; box-shadow: 0 0 2px 2px hsl(50deg 100% 58%); }
 :focus-visible { outline: 0; box-shadow: 0 0 2px 2px var(--focus-line-color); }

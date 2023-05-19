@@ -12,8 +12,6 @@
 	background-position: calc(100% - 16px) 50%;
 	border: 1px solid var(--line-color);
 	font-size: 14px;
-	// -webkit-appearance: none; /* 크롬 화살표 없애기 */
-	-moz-appearance: none; /* 파이어폭스 화살표 없애기 */
 	appearance: none;
 
 	&:focus {
