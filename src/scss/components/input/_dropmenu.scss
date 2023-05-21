@@ -1,18 +1,16 @@
 @use './helpers/index' as *;
 @use './vendors/sprites' as *;
 
-.drop-menu {
+.dropdown-menu {
 	display: inline-flex;
 	position: relative;
 	font-size: 14px;
 
 	&.is-open {
 		.list {
-			display: inline-block;
 			height: auto;
-			padding: 10px 15px;
+			max-height: 500px;
 			opacity: 1;
-			transition: opacity .6s, display .5s .2s;
 		}
 	}
 
@@ -35,17 +33,18 @@
 	.list {
 		display: inline-block;
 		height: 0;
-		padding: 0;
+		max-height: 0;
+		padding: 10px 15px;
 		overflow: hidden;
 		position: absolute;
 		top: 31px;
 		right: 0;
+		background: #fff;
 		border-radius: 5px;
 		box-shadow: 0 3px 11px hsl(0 0% 0% / .15);
 		opacity: 0;
 		font-weight: 600;
-		transition: opacity .6s, display .2s .4s;
-
+		transition: max-height .4s ease-out;
 
 		li {
 			display: block;

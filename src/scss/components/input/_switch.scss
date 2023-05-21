@@ -1,8 +1,48 @@
 @use './helpers/index' as *;
 @use './vendors/sprites' as *;
 
-label.switch {
+.switch {
+	display: inline-flex;
+
 	input[type='checkbox'] {
 		@include hide();
+
+		&:not(:checked) + .img::before { left: 2px; }
+
+		&:checked {
+			& + .img {
+				background: var(--active-color);
+
+				&::before { margin-left: 20px; }
+			}
+		}
+
+		&:disabled + .img { background: var(--disabled-color); }
+	}
+
+
+	.img {
+		box-sizing: border-box;
+		display: inline-block;
+		width: 40px;
+		height: 20px;
+		position: relative;
+		background: var(--gray-bg-color);
+		border-radius: 10px;
+		transition: all .2s ease-in;
+
+		&::before {
+			content: '';
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			background: #fff;
+			border-radius: 8px;
+			transition: all .2s;
+		}
+
+		& + .txt { margin-left: 10px; }
 	}
 }

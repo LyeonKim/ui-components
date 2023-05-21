@@ -16,8 +16,8 @@
 
 	&:focus {
 		background-image: url('@@img/common/arrow-enabled.png');
-		border-color: var(--focus-line-color);
-		box-shadow: 0 0 0 1px var(--focus-line-color) inset;
+		border-color: var(--active-color);
+		box-shadow: 0 0 0 1px var(--active-color) inset;
 	}
 
 	&:disabled {

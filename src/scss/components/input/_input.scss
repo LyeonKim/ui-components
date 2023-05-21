@@ -16,9 +16,9 @@ input.text {
 	&::placeholder { color: var(--gray-color3); }
 
 	&:focus {
-		border-color: var(--focus-line-color);
+		border-color: var(--active-color);
 		outline: none;
-		box-shadow: 0 0 0 1px var(--focus-line-color) inset;
+		box-shadow: 0 0 0 1px var(--active-color) inset;
 	}
 
 	&:read-only {
@@ -41,7 +41,7 @@ input.text {
 		border-right: 0;
 		border-left: 0;
 
-		&:focus { box-shadow: 0 -1px 0 0 var(--focus-line-color) inset; }
+		&:focus { box-shadow: 0 -1px 0 0 var(--active-color) inset; }
 
 		&:read-only {
 			background: transparent;

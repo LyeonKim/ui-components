@@ -11,20 +11,20 @@ const UI = ((window, document, $) => {
     init: () => {
       const html = document.documentElement;
 
-      // drop-menu
+      // dropdown-menu
       document.addEventListener('click', (event) => {
-        if(event.target.closest('.drop-menu')){ //closest(선택자) = 해당 선택자와 동일한 요소를 찾을 때 까지 -> e.target은 자신 ~ 부모를 순회하며 찾는다.
+        if(event.target.closest('.dropdown-menu')){ 
           const dropBtn  = event.target;
-          const dropMenu = dropBtn.closest('.drop-menu');
+          const dropMenu = dropBtn.closest('.dropdown-menu');
           const isOpen = dropMenu.classList.contains('is-open');
 
           const closeDropMenu = () => { dropMenu.classList.remove('is-open') };
 
-          const activeDropMenu = () => { 
+          const activeDropMenu = () => {
             dropMenu.classList.add('is-open');
 
             document.addEventListener('click', (item) => {
-              if(item.target.type == 'button' && !item.target.classList.contains('drop-btn')) {
+              if(item.target.type == 'button' && (item.target.closest('.drop-btn') && !item.target.classList.contains('drop-btn'))) {
                 dropBtn.innerText = item.target.innerText;
                 closeDropMenu();
               }
@@ -34,7 +34,7 @@ const UI = ((window, document, $) => {
           isOpen ? closeDropMenu() : activeDropMenu();
 
           document.addEventListener('click', (e) => {
-            if(!e.target.closest('.drop-menu')) {
+            if(!e.target.closest('.dropdown-menu')) {
               closeDropMenu();
             }
           });
