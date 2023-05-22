@@ -12,35 +12,33 @@ const UI = ((window, document, $) => {
       const html = document.documentElement;
 
       // dropdown-menu
-      document.addEventListener('click', (event) => {
-        if (event.target.closest('.dropdown-menu')) {
-          const dropBtn = event.target;
-          const dropMenu = dropBtn.closest('.dropdown-menu');
+      document.addEventListener('click', (e) => {
+        if (e.target.closest('.dropdown-menu')) {
+          const dropMenu = e.target.closest('.dropdown-menu');
           const isOpen = dropMenu.classList.contains('is-open');
 
-          const closeDropMenu = () => {dropMenu.classList.remove('is-open');};
+          if (e.target.closest('.drop-btn')) {
+            isOpen ? dropMenu.classList.remove('is-open') : dropMenu.classList.add('is-open');
+          }
 
-          const activeDropMenu = () => {
-            dropMenu.classList.add('is-open');
+          if (e.target.closest('.item')) {
+            const newText = e.target.closest('.item').innerText;
+            document.querySelector('.drop-btn').innerText = newText;
 
-            document.addEventListener('click', (item) => {
-              if (item.target.type == 'button' && item.target.closest('.drop-btn') && !item.target.classList.contains('drop-btn')) {
-                dropBtn.innerText = item.target.innerText;
-                closeDropMenu();
-              }
-            });
-          };
+            dropMenu.classList.remove('is-open');
+          }
 
-          isOpen ? closeDropMenu() : activeDropMenu();
-
-          document.addEventListener('click', (e) => {
-            if (!e.target.closest('.dropdown-menu')) {
-              closeDropMenu();
-            }
-          });
-
+        } else if (!e.target.closest('.dropdown-menu')) {
+          const dropMenu = document.querySelector('.dropdown-menu');
+          dropMenu.classList.remove('is-open');
         }
       });
+
+      //accordion
+      const accoItem = document.querySelectorAll('.accordion .item');
+
+
+
       html.classList.add('init');
     }
   };

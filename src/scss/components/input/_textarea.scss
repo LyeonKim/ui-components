@@ -13,9 +13,9 @@
 	&::placeholder { color: var(--disabled-text-color); }
 
 	&:focus {
-		border-color: var(--active-color);
+		border-color: var(--focus-line-color);
 		outline: none;
-		box-shadow: 0 0 0 1px var(--active-color) inset;
+		box-shadow: 0 0 0 1px var(--focus-line-color) inset;
 	}
 
 	&:read-only {

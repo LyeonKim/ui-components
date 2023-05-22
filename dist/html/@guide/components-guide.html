@@ -304,15 +304,15 @@
 						<ul class="file-wrap">
 							<li class="content">
 								<div class="name">첨부 파일명.pptx</div>
-								<button class="del">delete</button>
+								<button type="button" class="del">delete</button>
 							</li>
 							<li class="content">
 								<div class="name">첨부 파일명_최종.pptx</div>
-								<button class="del">delete</button>
+								<button type="button" class="del">delete</button>
 							</li>
 							<li class="content">
 								<div class="name">첨부 파일명_최종_최최종.pptx</div>
-								<button class="del">delete</button>
+								<button type="button" class="del">delete</button>
 							</li>
 						</ul>
 					</div>
@@ -444,41 +444,66 @@
 						<input type="checkbox" name="">
 						<span class="img"></span>
 						<span class="txt">텍스트</span>
-					</label>
+					</label> &nbsp;,
 					<label class="switch">
 						<input type="checkbox" name="" checked>
 						<span class="img"></span>
 						<span class="txt">텍스트</span>
-					</label>
+					</label> &nbsp;,
 					<label class="switch">
 						<input type="checkbox" name="" disabled>
 						<span class="img"></span>
 						<span class="txt">텍스트</span>
-					</label>
+					</label> &nbsp;,
 					<label class="switch">
 						<input type="checkbox" name="" checked disabled>
 						<span class="img"></span>
 						<span class="txt">텍스트</span>
+					</label> &nbsp;,
+					<br><br>
+					<label class="switch">
+						<input type="checkbox" name="">
+						<span class="txt">텍스트</span>
+						<span class="img"></span>
+					</label> &nbsp;,
+					<label class="switch">
+						<input type="checkbox" name="" checked>
+						<span class="txt">텍스트</span>
+						<span class="img"></span>
+					</label> &nbsp;,
+					<label class="switch">
+						<input type="checkbox" name="" disabled>
+						<span class="txt">텍스트</span>
+						<span class="img"></span>
+					</label> &nbsp;,
+					<label class="switch">
+						<input type="checkbox" name="" checked disabled>
+						<span class="txt">텍스트</span>
+						<span class="img"></span>
 					</label>
 				</div>
 			</div>
 			<div class="component-item" data-title="switch only">
 				<div class="component-contents">
-					<label class="switch">
+					<label class="switch only">
 						<input type="checkbox" name="">
 						<span class="img"></span>
+						<span class="txt"></span>
 					</label> &nbsp;
-					<label class="switch">
+					<label class="switch only">
 						<input type="checkbox" name="" checked>
 						<span class="img"></span>
+						<span class="txt"></span>
 					</label> &nbsp;
-					<label class="switch">
+					<label class="switch only">
 						<input type="checkbox" name="" disabled>
 						<span class="img"></span>
+						<span class="txt"></span>
 					</label> &nbsp;
-					<label class="switch">
+					<label class="switch only">
 						<input type="checkbox" name="" checked disabled>
 						<span class="img"></span>
+						<span class="txt"></span>
 					</label>
 				</div>
 			</div>
@@ -519,9 +544,9 @@
 					<div class="dropdown-menu">
 						<button type="button" class="drop-btn">최근등록순</button>
 						<ul class="list">
-							<li><button type="button">낮은 가격 순</button></li>
-							<li><button type="button">높은 가격 순</button></li>
-							<li><button type="button">판매량 순</button></li>
+							<li><button class="item" type="button">낮은 가격 순</button></li>
+							<li><button class="item" type="button">높은 가격 순</button></li>
+							<li><button class="item" type="button">판매량 순</button></li>
 						</ul>
 					</div>
 					<div style="height: 85px;color: #ddd;">높이 더미..</div>
@@ -530,16 +555,85 @@
 		</div>
 	</div>
 	
-	<!-- <h2 class="component-head">Button</h2> -->
-	<!-- <h3 class="component-sub-head">컴포넌트 종류</h3>
-		<div class="component-body">
-			<div class="component-row">
-				<div class="component-item" data-title="">
-					<div class="component-contents">
-
-					</div>
+	<h2 class="component-head">Accordion</h2>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item" data-title="forEach">
+				<div class="component-contents">
+					<ul class="accordion" style="width:375px">
+						<li class="item">
+							<div class="title"><a href="#accorCont1">기본정보1</a></div>
+							<div id="accorCont1" class="content">
+								<span>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores error, doloribus, voluptatibus mollitia, ullam enim qui sed debitis sint impedit quod vel quo incidunt. Enim voluptatum harum eveniet distinctio iste!
+								</span>
+							</div>
+						</li>
+						<li class="item is-open">
+							<div class="title"><a href="#accorCont2">기본정보2</a></div>
+							<div id="accorCont2" class="content">
+								<span>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores error, doloribus, voluptatibus mollitia, ullam enim qui sed debitis sint impedit quod vel quo incidunt. Enim voluptatum harum eveniet distinctio iste!
+								</span>
+							</div>
+						</li>
+						<li class="item">
+							<div class="title"><a href="#accorCont3">기본정보3</a></div>
+							<div id="accorCont3" class="content">
+								<span>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores error, doloribus, voluptatibus mollitia, ullam enim qui sed debitis sint impedit quod vel quo incidunt. Enim voluptatum harum eveniet distinctio iste!
+								</span>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
+			<div class="component-item" data-title="Input[type='checkbox']">
+				<div class="component-contents">
+					<ul class="accordion-input" style="width:375px">
+						<li class="item">
+							<input type="checkbox" id="accorInput1" class="check" checked>
+							<label for="accorInput1" class="title">기본정보1</label>
+							<div class="content">
+								<span>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laboriosam accusantium expedita, suscipit veritatis hic, tenetur impedit, illum quibusdam soluta libero aspernatur placeat.
+								</span>
+							</div>
+						</li>
+						<li class="item">
+							<input type="checkbox" id="accorInput2" class="check">
+							<label for="accorInput2" class="title">기본정보2</label>
+							<div class="content">
+								<span>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laboriosam accusantium expedita, suscipit veritatis hic, tenetur impedit, illum quibusdam soluta libero aspernatur placeat.
+								</span>
+							</div>
+						</li>
+						<li class="item">
+							<input type="checkbox" id="accorInput3" class="check">
+							<label for="accorInput3" class="title">기본정보3</label>
+							<div class="content">
+								<span>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laboriosam accusantium expedita, suscipit veritatis hic, tenetur impedit, illum quibusdam soluta libero aspernatur placeat.
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- <h2 class="component-head">Button</h2> -->
+	<!-- <h3 class="component-sub-head">컴포넌트 종류</h3>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item" data-title="">
+				<div class="component-contents">
+
+				</div>
+			</div>
+		</div>
 	</div> -->
 	<div class="resize-padding"></div>
 	<div class="resize-padding"></div>

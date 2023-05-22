@@ -4,20 +4,30 @@
 .switch {
 	display: inline-flex;
 
+	&.only {
+		.txt { @include hide(); }
+	}
+
 	input[type='checkbox'] {
 		@include hide();
 
-		&:not(:checked) + .img::before { left: 2px; }
+		&:not(:checked) ~ .img::before { left: 2px; }
 
 		&:checked {
-			& + .img {
+			& ~ .img {
 				background: var(--active-color);
 
 				&::before { margin-left: 20px; }
 			}
 		}
 
-		&:disabled + .img { background: var(--disabled-color); }
+		&:disabled {
+			& ~ .img { background: var(--disabled-color); }
+
+			& ~ .txt { color: var(--disabled-text-color); }
+		}
+
+		& + .txt { margin-right: 10px; }
 	}
 
 

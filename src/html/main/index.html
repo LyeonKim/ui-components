@@ -9,5 +9,16 @@
 {% block content %}
 <main id="mainContent" class="main-index">
 	<h2>페이지 타이틀</h2>
+	<div  style="display: flex; justify-content: flex-end;">
+		<div class="dropdown-menu">
+			<button type="button" class="drop-btn">최근등록순</button>
+			<ul class="list">
+				<li><button class="item" type="button">낮은 가격 순</button></li>
+				<li><button class="item" type="button">높은 가격 순</button></li>
+				<li><button class="item" type="button">판매량 순</button></li>
+			</ul>
+		</div>
+	</div>
+	<div style="height: 85px;color: #ddd;">높이 더미..</div>
 </main>
 {% endblock %}
