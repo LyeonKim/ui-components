@@ -1,0 +1,70 @@
+@use './helpers/index' as *;
+@use './vendors/sprites' as *;
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	width: 100%;
+	height: 30px;
+
+	& > & { display: inline-block; }
+
+	.btn-prev, .btn-next {
+		display: block;
+		width: 30px;
+		position: relative;
+		font-size: 0;
+		text-indent: -9999px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+	}
+
+	.btn-prev {
+		&.disabled {
+			&::after { @include sprite($common-arrow-disabled-prev); }
+		}
+
+		&::after { @include sprite($common-arrow-enable-prev); }
+	}
+
+	.btn-next {
+		&.disabled {
+			&::after { @include sprite($common-arrow-disabled-next); }
+		}
+
+		&::after { @include sprite($common-arrow-enable-next); }
+	}
+
+	.page-list {
+		display: flex;
+		gap: 20px;
+		font-size: 16px;
+
+		li {
+			width: 30px;
+			height: 100%;
+			border-radius: 50%;
+			text-align: center;
+
+			&.on {
+				background: var(--primary-color);
+				color: #fff;
+			}
+
+			a {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}

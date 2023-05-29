@@ -2,31 +2,47 @@
 @use './vendors/sprites' as *;
 
 .accordion {
+	&.small {
+		.title a { font-size: 14px; }
+
+		.content { font-size: 12px; }
+	}
+
 	.item {
 		height: auto;
-		margin-bottom: 10px;
 		border-top: 1px solid var(--line-color);
-		border-bottom: 1px solid var(--line-color);
 
-		&:last-child { margin-bottom: 0; }
+		&:last-child { border-bottom: 1px solid var(--line-color); }
 
 		&.is-open {
-			.title::after { transform: rotate(-180deg); }
+			& > .title::after { transform: rotate(-180deg); }
 
-			.content {
+			& > .content {
 				height: auto;
-				max-height: 100vh;
-				overflow-y: scroll;
+				max-height: 90vh;
 				transition: max-height .5s;
 			}
+		}
+
+		.accordion {
+			box-sizing: border-box;
+			width: 100%;
 		}
 	}
 
 	.title {
 		display: block;
-		padding: 16px 54px 15px 20px;
 		position: relative;
-		font-size: 18px;
+		font-weight: 600;
+
+		a {
+			box-sizing: border-box;
+			display: block;
+			padding: 16px 54px 15px 20px;
+			position: relative;
+			z-index: 1;
+			font-size: 18px;
+		}
 
 		&::after {
 			content: '';
@@ -35,6 +51,7 @@
 			position: absolute;
 			top: calc(50% - 6px);
 			right: 20px;
+			z-index: 0;
 			background: #fff url('@@img/common/arrow.png') no-repeat 50% 50%;
 			transition: .3s;
 		}
@@ -45,12 +62,15 @@
 		height: 0;
 		max-height: 0;
 		overflow: hidden;
-		background: var(--disabled-color);
 		transition: max-height .5s;
 
-		span {
+		.inner {
 			display: inline-block;
+			width: 100%;
 			padding: 20px 24px;
+			overflow-y: scroll;
+
+			.accordion { width: 100%; }
 		}
 	}
 }

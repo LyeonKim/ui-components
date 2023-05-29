@@ -2,13 +2,17 @@
 @use './vendors/sprites' as *;
 
 .accordion-input {
+	&.small {
+		.title { font-size: 14px; }
+
+		.content { font-size: 12px; }
+	}
+
 	.item {
 		height: auto;
-		margin-bottom: 10px;
 		border-top: 1px solid var(--line-color);
-		border-bottom: 1px solid var(--line-color);
 
-		&:last-child { margin-bottom: 0; }
+		&:last-child { border-bottom: 1px solid var(--line-color); }
 	}
 
 	.check {
@@ -19,8 +23,8 @@
 
 			& ~ .content {
 				height: auto;
-				max-height: 100vh;
-				overflow-y: scroll;
+				max-height: 50vh;
+				overflow-y: visible;
 				transition: max-height .5s;
 			}
 		}
@@ -31,6 +35,8 @@
 		padding: 16px 54px 15px 20px;
 		position: relative;
 		font-size: 18px;
+		font-weight: 600;
+		cursor: pointer;
 
 		&::after {
 			content: '';
@@ -49,12 +55,15 @@
 		height: 0;
 		max-height: 0;
 		overflow: hidden;
-		background: var(--disabled-color);
 		transition: max-height .5s;
 
-		span {
+		.inner {
 			display: inline-block;
+			width: 100%;
 			padding: 20px 24px;
+			overflow-y: scroll;
+
+			.accordion { width: 100%; }
 		}
 	}
 }

@@ -27,8 +27,8 @@
 		<ul class="list"></ul>
 	</div>
 
-	<h2 class="component-head">Button</h2>
 
+	<h2 class="component-head">Button</h2>
 	<h3 class="component-sub-head">기본 버튼</h3>
 	<div class="component-body">
 		<div class="component-row">
@@ -257,7 +257,6 @@
 
 
 	<h2 class="component-head">Input</h2>
-
 	<h3 class="component-sub-head">Text</h3>
 	<div class="component-body">
 		<div class="component-row">
@@ -379,7 +378,6 @@
 						<input type="checkbox" class="checkbox indeterminate" name=""><span>indeterminate</span>
 					</label>
 					<br>
-
 					<label class="check">
 						<input type="checkbox" class="checkbox" name="" disabled><span>disabled</span>
 					</label>
@@ -390,7 +388,6 @@
 						<input type="checkbox" class="checkbox indeterminate" name="" disabled ><span>indeterminate</span>
 					</label>
 					<br>
-
 					<label class="check">
 						<input type="checkbox" class="checkbox error" name=""><span>error &nbsp; &emsp;</span>
 					</label>
@@ -511,7 +508,6 @@
 	</div>
 
 	<h3 class="component-sub-head">Select</h3>
-
 	<div class="component-body">
 		<div class="component-row">
 			<div class="component-item" data-title="Select">
@@ -531,7 +527,7 @@
 						<option value="option3">옵션 3</option>
 					</select> <br><br>
 					error &emsp;&emsp;: &emsp;
-					<select class="select error">
+					<select class="select error item">
 						<option value="">선택하세요</option>
 						<option value="option1">옵션 1</option>
 						<option value="option2">옵션 2</option>
@@ -555,34 +551,117 @@
 		</div>
 	</div>
 
+
 	<h2 class="component-head">Accordion</h2>
 	<div class="component-body">
 		<div class="component-row">
-			<div class="component-item" data-title="forEach">
+			<div class="component-item" data-title="2-depth">
 				<div class="component-contents">
-					<ul class="accordion" style="width:375px">
-						<li class="item">
-							<div class="title"><a href="#accorCont1">기본정보1</a></div>
-							<div id="accorCont1" class="content">
-								<span>
-									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores error, doloribus, voluptatibus mollitia, ullam enim qui sed debitis sint impedit quod vel quo incidunt. Enim voluptatum harum eveniet distinctio iste!
-								</span>
-							</div>
-						</li>
+					<ul class="accordion">
 						<li class="item is-open">
-							<div class="title"><a href="#accorCont2">기본정보2</a></div>
-							<div id="accorCont2" class="content">
-								<span>
-									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores error, doloribus, voluptatibus mollitia, ullam enim qui sed debitis sint impedit quod vel quo incidunt. Enim voluptatum harum eveniet distinctio iste!
-								</span>
+							<div class="title"><a href="#accorCont1">Title-1</a></div>
+							<div id="accorCont1" class="content">
+								<div class="inner">
+									<ul class="accordion small">
+										<li class="item">
+											<div class="title"><a href="#accorCont11">Title2-1</a></div>
+											<div id="accorCont11" class="content">
+												<div class="inner">
+													아코디언 Depth2 content
+												</div>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title"><a href="#accorCont12">Title2-2</a></div>
+											<div id="accorCont12" class="content">
+												<div class="inner">
+													아코디언 Depth2 content
+												</div>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title"><a href="#accorCont13">Title2-3</a></div>
+											<div id="accorCont13" class="content">
+												<div class="inner">
+													아코디언 Depth2 content
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</li>
 						<li class="item">
-							<div class="title"><a href="#accorCont3">기본정보3</a></div>
-							<div id="accorCont3" class="content">
-								<span>
+							<div class="title"><a href="#accorCont2">Title-2</a></div>
+							<div id="accorCont2" class="content">
+								<div class="inner">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores error, doloribus, voluptatibus mollitia, ullam enim qui sed debitis sint impedit quod vel quo incidunt. Enim voluptatum harum eveniet distinctio iste!
-								</span>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="title"><a href="#accorCont3">Title-3</a></div>
+							<div id="accorCont3" class="content">
+								<div class="inner">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores error, doloribus, voluptatibus mollitia, ullam enim qui sed debitis sint impedit quod vel quo incidunt. Enim voluptatum harum eveniet distinctio iste!
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="component-item" data-title="여러개">
+				<div class="component-contents">
+					<ul class="accordion">
+						<li class="item">
+							<div class="title"><a href="#accorCont1">Title-1</a></div>
+							<div id="accorCont1" class="content">
+								<div class="inner">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores error, doloribus, voluptatibus mollitia, ullam enim qui sed debitis sint impedit quod vel quo incidunt. Enim voluptatum harum eveniet distinctio iste!
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="title"><a href="#accorCont2">Title-2</a></div>
+							<div id="accorCont2" class="content">
+								<div class="inner">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores error, doloribus, voluptatibus mollitia, ullam enim qui sed debitis sint impedit quod vel quo incidunt. Enim voluptatum harum eveniet distinctio iste!
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="title"><a href="#accorCont3">Title-3</a></div>
+							<div id="accorCont3" class="content">
+								<div class="inner">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores error, doloribus, voluptatibus mollitia, ullam enim qui sed debitis sint impedit quod vel quo incidunt. Enim voluptatum harum eveniet distinctio iste!
+								</div>
+							</div>
+						</li>
+					</ul>
+					<br><br>
+					<ul class="accordion small">
+						<li class="item">
+							<div class="title"><a href="#accorCont11">Small-1</a></div>
+							<div id="accorCont11" class="content">
+								<div class="inner">
+									아코디언 Depth2 content
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="title"><a href="#accorCont12">Small-2</a></div>
+							<div id="accorCont12" class="content">
+								<div class="inner">
+									아코디언 Depth2 content
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="title"><a href="#accorCont13">Small-3</a></div>
+							<div id="accorCont13" class="content">
+								<div class="inner">
+									아코디언 Depth2 content
+								</div>
 							</div>
 						</li>
 					</ul>
@@ -590,35 +669,336 @@
 			</div>
 			<div class="component-item" data-title="Input[type='checkbox']">
 				<div class="component-contents">
-					<ul class="accordion-input" style="width:375px">
+					<ul class="accordion-input">
 						<li class="item">
-							<input type="checkbox" id="accorInput1" class="check" checked>
-							<label for="accorInput1" class="title">기본정보1</label>
+							<input type="checkbox" id="accorInput1" class="check">
+							<label for="accorInput1" class="title">Title-1</label>
 							<div class="content">
-								<span>
+								<div class="inner">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laboriosam accusantium expedita, suscipit veritatis hic, tenetur impedit, illum quibusdam soluta libero aspernatur placeat.
-								</span>
+								</div>
 							</div>
 						</li>
 						<li class="item">
-							<input type="checkbox" id="accorInput2" class="check">
-							<label for="accorInput2" class="title">기본정보2</label>
+							<input type="checkbox" id="accorInput2" class="check" checked>
+							<label for="accorInput2" class="title">Title-2</label>
 							<div class="content">
-								<span>
+								<div class="inner">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laboriosam accusantium expedita, suscipit veritatis hic, tenetur impedit, illum quibusdam soluta libero aspernatur placeat.
-								</span>
+								</div>
 							</div>
 						</li>
 						<li class="item">
 							<input type="checkbox" id="accorInput3" class="check">
-							<label for="accorInput3" class="title">기본정보3</label>
+							<label for="accorInput3" class="title">Title-3</label>
 							<div class="content">
-								<span>
+								<div class="inner">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laboriosam accusantium expedita, suscipit veritatis hic, tenetur impedit, illum quibusdam soluta libero aspernatur placeat.
-								</span>
+								</div>
 							</div>
 						</li>
 					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<h2 class="component-head">Table</h2>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item" data-title="row">
+				<div class="component-contents">
+					<div class="table-layout">
+						<table>
+							<caption>테이블 가로형</caption>
+							<colgroup>
+								<col width="25%">
+								<col width="25%">
+								<col width="25%">
+								<col width="25%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>카테고리1<br>카테고리1</th>
+									<th>카테고리2</th>
+									<th>카테고리3</th>
+									<th>카테고리4</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>내용1</td>
+									<td>내용2</td>
+									<td>내용3</td>
+									<td>내용4</td>
+								</tr>
+								<tr>
+									<td>내용1</td>
+									<td>내용2</td>
+									<td>내용3</td>
+									<td>내용4</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="component-item" data-title="col">
+				<div class="component-contents">
+					<div class="table-layout">
+						<table>
+							<caption>테이블 가로형</caption>
+							<colgroup>
+								<col width="25%">
+								<col width="25%">
+								<col width="25%">
+								<col width="25%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">카테고리1</th>
+									<td>내용1</td>
+									<td>내용2</td>
+									<td>내용3</td>
+								</tr>
+								<tr>
+									<th scope="row">카테고리2</th>
+									<td>내용1</td>
+									<td>내용2</td>
+									<td>내용3</td>
+								</tr>
+								<tr>
+									<th scope="row">카테고리3</th>
+									<td>내용1</td>
+									<td>내용2</td>
+									<td>내용3</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="component-row">
+			<div class="component-item" data-title="전체 center">
+				<div class="component-contents">
+					<div class="table-layout">
+						<table class="center">
+							<caption>테이블 가로형</caption>
+							<colgroup>
+								<col width="25%">
+								<col width="25%">
+								<col width="25%">
+								<col width="25%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>카테고리1</th>
+									<th>카테고리2</th>
+									<th>카테고리3</th>
+									<th>카테고리4</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>내용1</td>
+									<td>내용2</td>
+									<td>내용3</td>
+									<td>내용4</td>
+								</tr>
+								<tr>
+									<td>내용1</td>
+									<td>내용2</td>
+									<td>내용3내용영역 내용<br>내용내용내용</td>
+									<td>내용4</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="component-item" data-title="부분 center">
+				<div class="component-contents">
+					<div class="table-layout">
+						<table>
+							<caption>테이블 가로형</caption>
+							<colgroup>
+								<col width="20%">
+								<col width="40%">
+								<col width="40%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">카테고리1</th>
+									<td class="center">내용1</td>
+									<td>내용2</td>
+								</tr>
+								<tr>
+									<th scope="row">카테고리2</th>
+									<td class="center">내용1</td>
+									<td>카테고리 내용 내용내용내용내용내용<br>내용 내용내용내용용2</td>
+								</tr>
+								<tr>
+									<th scope="row">카테고리3</th>
+									<td class="center">내용1</td>
+									<td>내용2</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<h2 class="component-head">Pagination</h2>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item" data-title="">
+				<div class="component-contents">
+					<div class="pagination">
+						<a href="#" class="btn-prev disabled">이전</a>
+						<ul class="page-list">
+							<li class="on"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<!-- <li><a href="#">6</a></li> -->
+							<!-- <li><a href="#">7</a></li> -->
+						</ul>
+						<a href="#" class="btn-next">다음</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<h2 class="component-head">Tab Menu</h2>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item" data-title="deafult/ center/ right">
+				<div class="component-contents">
+					<div class="tab-menu">
+						<ul class="tab-list">
+							<li class="on"><a href="#">추천</a></li>
+							<li><a href="#">신선</a></li>
+							<li><a href="#">유아식품</a></li>
+							<li><a href="#">이벤트/혜택</a></li>
+							<li><a href="#">베베쿡사전</a></li>
+						</ul>
+					</div>
+					<div class="tab-menu center">
+						<ul class="tab-list">
+							<li class="on"><a href="#">추천</a></li>
+							<li><a href="#">신선</a></li>
+							<li><a href="#">유아식품</a></li>
+							<li><a href="#">이벤트/혜택</a></li>
+							<li><a href="#">베베쿡사전</a></li>
+						</ul>
+					</div>
+					<div class="tab-menu left">
+						<ul class="tab-list">
+							<li class="on"><a href="#">추천</a></li>
+							<li><a href="#">신선</a></li>
+							<li><a href="#">유아식품</a></li>
+							<li><a href="#">이벤트/혜택</a></li>
+							<li><a href="#">베베쿡사전</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="component-item" data-title="etc">
+				<div class="component-contents">
+					<div class="tab-menu">
+						<ul class="tab-list">
+							<li class="on"><a href="#">추천</a></li>
+							<li><a href="#">신선</a></li>
+							<li><a href="#">유아식품</a></li>
+							<li><a href="#">이벤트/혜택</a></li>
+							<li><a href="#">베베쿡사전</a></li>
+							<li><a href="#">이벤트/혜택</a></li>
+							<li><a href="#">베베쿡사전</a></li>
+						</ul>
+					</div>
+					<br>full
+					<div class="tab-menu full">
+						<ul class="tab-list">
+							<li class="on"><a href="#">추천</a></li>
+							<li><a href="#">신선</a></li>
+							<li><a href="#">유아식품</a></li>
+							<li><a href="#">이벤트/혜택</a></li>
+							<li><a href="#">베베쿡사전</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item" data-title="Tabs">
+				<div class="component-contents">
+					<div class="tabs">
+						<div class="tab-menu">
+							<ul class="tab-list">
+								<li class="item is-active"><a href="#tabCont1">tabs1</a></li>
+								<li class="item"><a href="#tabCont2">tabs2</a></li>
+								<li class="item"><a href="#tabCont3">tabs3</a></li>
+								<li class="item"><a href="#tabCont4">tabs4</a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<ul class="content-list">
+								<li id="tabCont1" class="content is-active">
+									tab content01<br><br>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+									Dignissimos quaerat veritatis fugiat inventore recusandae et quisquam, <br>
+									velit neque voluptate consectetur eaque quod consequatur <br>
+									fuga eos ullam nulla illum, natus libero. Voluptates officia iure deleniti explicabo?
+								</li>
+								<li id="tabCont2" class="content">
+									tab content02<br><br>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+									Dignissimos quaerat veritatis fugiat inventore recusandae et quisquam, <br>
+									velit neque voluptate consectetur eaque quod consequatur <br>
+									fuga eos ullam nulla illum, natus libero. Voluptates officia iure deleniti explicabo?
+								</li>
+								<li id="tabCont3" class="content">
+									tab content03<br><br>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+									Dignissimos quaerat veritatis fugiat inventore recusandae et quisquam, <br>
+									velit neque voluptate consectetur eaque quod consequatur <br>
+									fuga eos ullam nulla illum, natus libero. Voluptates officia iure deleniti explicabo?
+								</li>
+								<li id="tabCont4" class="content">
+									tab content04<br><br>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+									Dignissimos quaerat veritatis fugiat inventore recusandae et quisquam, <br>
+									velit neque voluptate consectetur eaque quod consequatur <br>
+									fuga eos ullam nulla illum, natus libero. Voluptates officia iure deleniti explicabo?
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="component-item" data-title="">
+				<div class="component-contents"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<h2 class="component-head">Modal</h2>
+	<div class="component-body">
+		<div class="component-row">
+			<div class="component-item" data-title="">
+				<div class="component-contents">
+					<a href="/html/%40guide/modal.html" target="_blank" style="color:blue; text-decoration: underline 1px solid blue;">모달페이지 바로가기</a>
 				</div>
 			</div>
 		</div>
@@ -635,6 +1015,7 @@
 			</div>
 		</div>
 	</div> -->
+
 	<div class="resize-padding"></div>
 	<div class="resize-padding"></div>
 	<div class="resize-padding"></div>
